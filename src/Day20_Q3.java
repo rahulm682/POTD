@@ -30,7 +30,7 @@ public class Day20_Q3 {
             j++;
             while(j<=n && arr[j]==true) j++;
         }
-        System.out.println(n+" "+k);
+//        System.out.println(n+" "+k);
         if(ans>=k) System.out.println("YES");
         else System.out.println("NO");
     }
