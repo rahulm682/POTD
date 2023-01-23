@@ -45,6 +45,7 @@ public class Day22_Q1 {
                 if(t.charAt(i)!=ans.get(s.charAt(i))) return false;
             }
 
+// if mp contains t.charAt(i) and do not contain s.charAt(i) then return false as it doesn't follow one to one mapping
             if(ans.containsValue(t.charAt(i)) && !ans.containsKey(s.charAt(i))) return false;
 
             ans.put(s.charAt(i), t.charAt(i));
