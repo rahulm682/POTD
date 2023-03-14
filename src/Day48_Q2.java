@@ -43,7 +43,7 @@ public class Day48_Q2 {
         // max possible value can be 10^5 and it can be represented using 18 bits in binary form
         // therefore we start from 1 followed by 17 0 bits
 
-        // we would start from the MSB of the greatest possible ans as our answer
+        // we would start from the MSB of the greatest possible answer as our answer
         // if it is possible to make the ans then set the current bit in the answer
         // now check for the further value i.e. if it is possible to make the next bits set or not
         // update the answer likewise
@@ -53,7 +53,7 @@ public class Day48_Q2 {
         int ans = 0;
 
         for(int i=17;i>=0;i--) {
-            // let the temp ans be ans | (i<<i) ==> this could be our answer
+            // let the temp ans be (ans | (i<<i)) ==> this could be our answer
             int x = ans | (1<<i);
 
             // if we can make the temp answer as our answer
