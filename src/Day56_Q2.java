@@ -40,11 +40,22 @@
 //0 <= tokens.length <= 1000
 //0 <= tokens[i], power < 104
 
+import java.util.Arrays;
+
 public class Day56_Q2 {
     public static void main(String[] args) {
 
     }
 
+
+// we are given power initially
+// we can increase our score by processing the minimum token
+// so whenever we have current power > minimum element we will increase score
+// and if power<minimum element then we will decrement score and increment power using the maximum available element
+// therefore we will do sorting here and to increase score we will process minimum element first
+// ans to increase power we will process the maximum element and decrease the score
+
+// at each iteration we will update the maximum score and we return this maximum as answer
     public int bagOfTokensScore(int[] tokens, int power) {
         int score = 0, n = tokens.length, ans = 0;
         if(n==0) return 0;
